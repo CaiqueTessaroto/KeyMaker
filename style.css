@@ -1,0 +1,280 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(38, 38, 38);
+}
+
+form {
+    background-color: rgb(238, 238, 238);
+    width: 400px;
+    height: 500px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+main {
+    margin: 1% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px 1px;
+}
+
+.pictures {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button_eyes {
+    background-image: url(/imagens/close_eyes.png);
+    background-color: rgba(238, 238, 238, 0);
+    position: relative;
+    left: 35%;
+
+    height: 50px;
+    width: 70px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.icon_interrogacao {
+    background-image: url(/imagens/interrogacao.png);
+    background-color: rgba(238, 238, 238, 0);
+    position: relative;
+    left: 90%;
+    bottom: 7%;
+
+    height: 50px;
+    width: 60px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.icon_keymaker {
+    width: 100%;
+    position: relative;
+    left: 15%;
+}
+
+.texto_explicativo {
+    font-size: 15px;
+    color: 6C6C6C;
+}
+
+.checkboxfield {
+    align-items: center;
+
+    display: grid;
+    /* aqui eu determino é são 3 colunas de tamanhos iguas, cada coluna tem uma fração */
+    grid-template-columns: repeat(15, 1fr);
+    /* esssa é a altura das linhas, se vc quiser pode apaga-la caso não queira uma altura definida */
+    grid-auto-rows: 1%;
+    /* espaço entre um elemento interno e outro */
+    grid-gap: 20px 1px;
+
+
+    direction: rtl;
+}
+
+.selecfield {
+    flex-direction: row;
+}
+
+.order {
+    width: 38px;
+    height: 24px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20%;
+
+    position: relative;
+    font-family: Arial;
+}
+
+.inputfields {
+    display: grid;
+    /* aqui eu determino é são 3 colunas de tamanhos iguas, cada coluna tem uma fração */
+    grid-template-columns: repeat(1, 1fr);
+    /* espaço entre um elemento interno e outro */
+    grid-gap: 14px 1px;
+
+}
+
+.inputfield {
+    flex-direction: column;
+}
+
+.more_checkbox {
+    font-weight: 17;
+    color: rgb(0, 0, 0);
+    background-color: rgba(163, 163, 163, 0.212);
+    border-radius: 14px;
+
+    width: 14px;
+    height: 14px;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    padding: initial;
+    border: initial;
+    cursor: default;
+    appearance: auto;
+
+    position: relative;
+    bottom: 1px;
+    cursor: pointer;
+}
+
+.less_checkbox {
+    font-weight: 17;
+    color: rgb(0, 0, 0);
+    background-color: rgba(163, 163, 163, 0.212);
+    border-radius: 14px;
+
+    width: 14px;
+    height: 14px;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    padding: initial;
+    border: initial;
+    cursor: default;
+    appearance: auto;
+
+    position: relative;
+    bottom: 1px;
+    cursor: pointer;
+}
+
+
+div.input {
+    width: 200px;
+    height: 10px;
+
+}
+
+div.input label {
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: rgb(238, 238, 238);
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+div.input .input {
+    width: 100%;
+    padding: 5px;
+    color: rgb(134, 134, 134);
+    border: 0;
+    border-bottom: 2px solid rgb(238, 238, 238);
+    outline: 0;
+}
+
+div.input .input:focus,
+div.input .input:valid {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+
+.input {
+    width: 200px;
+    height: 10px;
+    font-size: 15px;
+
+    padding: 15px;
+    outline: none;
+
+    background-color: rgba(255, 255, 255, 0);
+
+
+    border: 0;
+    border-bottom: 2px solid rgb(238, 238, 238);
+
+    outline: 0;
+}
+
+.moreless {
+    background-image: url(/imagens/button.png);
+    width: 46px;
+    height: 35px;
+    display: flex;
+    justify-content: row;
+    position: relative;
+    bottom: 30px;
+}
+
+.button_less {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    position: relative;
+    left: 5px;
+    top: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+
+}
+
+.button_more {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    position: relative;
+    left: 13px;
+    top: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+
+}
+
+.button_play {
+    text-align: center;
+    font-weight: 30;
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 37, 37);
+    padding: 1px 0;
+    border-radius: 16px;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    bottom: 30px;
+}
+
+
+.div_resultado_output {
+    position: relative;
+    bottom: 30px;
+}
+
+.texto_aviso_resultado {
+    font-size: 20px;
+    color: 6C6C6C;
+    position: relative;
+    left: 35%;
+}
+
+.output {
+    width: 250px;
+    height: 10px;
+    font-size: 15px;
+
+    padding: 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}

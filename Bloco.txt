@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Security-Policy" content=" script-src 'self' 'nonce-2726c7f26c' ;">
+
+
+<meta http-equiv="Content-Security-Policy" content=" script-src 'self' 'unsafe-inline';">
+
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self'
+    'unsafe-hashes' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=', ;">
+
+
+
+
+
+var gerarNonce = function (length) {
+    var text = "";
+    var possible = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";
+    for (var i = 0; i < length; i++) {
+        text += possible.charCodeAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+}
+var nonce = gerarNonce(15);
+console.log(nonce);
+
+
+
+
+
+
+
+
+
+// Selecionar a tag meta CSP com querySelector
+const metaElement = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+// Atualizar o valor do content, inserindo o nonce
+metaElement.setAttribute('content', `script-src 'self' 'nonce-${nonce}';`);
+
+console.log('Meta tag CSP atualizada: ', metaElement.getAttribute('content'));
+
+var meta = document.getElementsByTagName("meta")[2];
+var node_meta = document.importNode(meta, true);
+console.log(node_meta);
+
+metaElement.addEventListener('DOMContentLoaded', function () {
+    // Atualizar o valor do content, inserindo o nonce
+    metaElement.setAttribute('content', `script-src 'self' 'nonce-${nonce}';`);
+
+    console.log('Meta tag CSP atualizada: ', metaElement.getAttribute('content'));
+
+    var meta = document.getElementsByTagName("meta")[2];
+    var node_meta = document.importNode(meta, true);
+    console.log(node_meta);
+});
+
+
+
+
+
+
+
+
+
+
+
+// Selecionar o script pelo ID e inserir o nonce
+const scriptElement = document.getElementById('Add_Checkbox');
+scriptElement.setAttribute('nonce', nonce);
+
+var node_script = document.importNode(scriptElement, true);
+console.log(node_script);
+
+
+scriptElement.addEventListener('DOMContentLoaded', function () {
+    scriptElement.setAttribute('nonce', nonce);
+
+    var node_script = document.importNode(scriptElement, true);
+    console.log(node_script);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+

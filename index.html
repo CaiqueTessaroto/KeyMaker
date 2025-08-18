@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self' ;">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body style="width:400px; height:600px;">
+
+    <main>
+
+        <picture class=" pictures">
+            <img src="imagens/KeyMaker.png" alt="logo KeyMaker" class="icon_keymaker">
+
+            <button type="button" class="button_eyes" id="button_eyes"></button>
+        </picture>
+
+        <p class="texto_explicativo">Crie senhas padronizadas para cada site que são capazes ter ser memorizadas com
+            o tempo.</p>
+
+
+
+        <section class="inputfields" id="inputfields">
+
+            <section id="container_0" class="container">
+
+                <section class="inputfield">
+
+                    <div class="checkboxfield">
+                        <button type="button" class="less_checkbox" id="checkbox_button_less_0">-</button>
+                        <button type="button" class="more_checkbox" id="checkbox_button_more_0">+</button>
+                        <input type="checkbox" id="checkbox_0_0" class="checkbox" name="checkbox_field_0">
+                    </div>
+                    <div class="selecfield">
+                        <select class="order" name="ordem" id="ordem_0">
+                        </select>
+                        <input class="input" id="password_0" type="password" name="myInput" />
+                    </div>
+
+                </section>
+
+            </section>
+
+            <section id="container_1" class="container">
+                <section class="inputfield">
+                    <div class="checkboxfield">
+                        <button type="button" class="less_checkbox" id="checkbox_button_less_1">-</button>
+                        <button type="button" class="more_checkbox" id="checkbox_button_more_1">+</button>
+                        <input type="checkbox" id="checkbox_0_1" class="checkbox" name="checkbox_field_1">
+                    </div>
+                    <div class="selecfield">
+                        <select class="order" name="ordem" id="ordem_1">
+                        </select>
+                        <input class="input" id="password_1" type="password" name="myInput" />
+                    </div>
+                </section>
+            </section>
+
+            <section id="container_2" class="container"></section>
+
+        </section>
+
+        <div class="moreless" ;>
+            <button type="button" class="button_less" id="button_less"></button>
+            <button type="button" class="button_more" id="button_more"></button>
+        </div>
+
+        <button type="button" class="button_play" id="button_play">Generate</button>
+
+        <div class="div_resultado_output">
+            <p class="texto_aviso_resultado">Resultado:</p>
+            <input class="output" id="output" type="password" placeholder="Senha" name="myInput" />
+        </div>
+
+    </main>
+
+    <a type="button" class="icon_interrogacao" href="/explanation.html"></a>
+
+
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
+
+
+<script id="text_template" type="text/template">
+    <section class="inputfield" ;>
+        <div class="checkboxfield">
+            <button type="button" class="less_checkbox" id = {{less}}>-</button>
+            <button type="button" class="more_checkbox" id = {{more}}>+</button>
+            <input type="checkbox" id={{id}} class="checkbox" name={{name}}>
+        </div>
+        <div class="selecfield">
+            <select class="order" name="ordem" id={{ordem}}>
+            </select>
+            <input class="input" id={{password}} type="password" name="myInput" />
+        </div>
+    </section>
+</script>
