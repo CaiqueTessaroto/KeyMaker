@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -19,20 +19,20 @@
             <span class="brand-name">KeyMaker</span>
         </a>
         <div class="header-controls">
-            <button class="btn-theme" id="btn_theme" title="Alternar tema"
-                aria-label="Alternar modo claro/escuro">🌙</button>
-            <button class="btn-autosave" id="btn_autosave" title="Salvamento automático ativado"
-                aria-label="Ativar ou desativar salvamento automático" aria-pressed="false">💾</button>
-            <button class="btn-eyes" id="button_eyes" title="Mostrar/ocultar senhas"
-                aria-label="Mostrar ou ocultar senhas">👁</button>
-            <a class="btn-help" href="explanation.html" title="Ajuda" aria-label="Ajuda">?</a>
+            <button class="btn-theme" id="btn_theme" title="Toggle theme"
+                aria-label="Toggle light/dark mode">🌙</button>
+            <button class="btn-autosave" id="btn_autosave" title="Auto-save enabled"
+                aria-label="Enable or disable auto-save" aria-pressed="false">💾</button>
+            <button class="btn-eyes" id="button_eyes" title="Show/hide passwords"
+                aria-label="Show or hide passwords">👁</button>
+            <a class="btn-help" href="explanation.html" title="Help" aria-label="Help">?</a>
         </div>
     </header>
 
     <!-- MAIN -->
     <main>
 
-        <p class="app-subtitle">Crie senhas padronizadas por site, fáceis de memorizar com o tempo.</p>
+        <p class="app-subtitle">Create standardized passwords per site, easy to memorize over time.</p>
 
         <!-- Input fields -->
         <section class="inputfields" id="inputfields">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="selecfield">
                         <select class="order" name="ordem" id="ordem_0"></select>
-                        <input class="input" id="password_0" type="password" placeholder="Site / domínio"
+                        <input class="input" id="password_0" type="password" placeholder="Site / domain"
                             name="myInput">
                     </div>
                 </section>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="selecfield">
                         <select class="order" name="ordem" id="ordem_1"></select>
-                        <input class="input" id="password_1" type="password" placeholder="Palavra-chave" name="myInput">
+                        <input class="input" id="password_1" type="password" placeholder="Keyword" name="myInput">
                     </div>
                 </section>
             </section>
@@ -72,21 +72,21 @@
 
         <!-- Add / Remove field -->
         <div class="moreless">
-            <button type="button" class="button_less" id="button_less">Remover campo</button>
-            <button type="button" class="button_more" id="button_more">Adicionar campo</button>
+            <button type="button" class="button_less" id="button_less">Remove field</button>
+            <button type="button" class="button_more" id="button_more">Add field</button>
         </div>
 
         <!-- Generate -->
-        <button type="button" class="button_play" id="button_play">⚡ Gerar Senha</button>
+        <button type="button" class="button_play" id="button_play">⚡ Generate Password</button>
 
         <!-- Result -->
         <div class="div_resultado_output">
-            <p class="texto_aviso_resultado">Resultado</p>
+            <p class="texto_aviso_resultado">Result</p>
 
             <div class="output-container">
-                <input class="output" id="output" type="password" placeholder="Senha gerada" name="myInput">
+                <input class="output" id="output" type="password" placeholder="Generated password" name="myInput">
 
-                <button type="button" id="button_copy" class="button_copy" title="Copiar senha">
+                <button type="button" id="button_copy" class="button_copy" title="Copy password">
                     📋
                 </button>
             </div>
@@ -128,7 +128,7 @@
             </div>
             <div class="selecfield">
                 <select class="order" name="ordem" id={{ordem}}></select>
-                <input class="input" id={{password}} type="password" placeholder="Palavra-chave" name="myInput">
+                <input class="input" id={{password}} type="password" placeholder="Keyword" name="myInput">
             </div>
         </section>
     </script>

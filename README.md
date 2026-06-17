@@ -4,7 +4,7 @@ Generate deterministic and site-specific passwords directly in your browser.
 
 KeyMaker is a lightweight, open-source browser extension that creates unique passwords for each website based on information you already know. The same inputs will always generate the same password, making it easier to remember and reproduce passwords without storing them.
 
-Try Online
+## Try Online
 
 You can test KeyMaker directly in your browser:
 
