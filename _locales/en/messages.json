@@ -27,7 +27,7 @@
     "message": "Add field"
   },
   "generate": {
-    "message": "⚡ Generate Password"
+    "message": "Generate Password"
   },
   "result": {
     "message": "Result"

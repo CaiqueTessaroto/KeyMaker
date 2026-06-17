@@ -27,7 +27,7 @@
     "message": "添加字段"
   },
   "generate": {
-    "message": "⚡ 生成密码"
+    "message": "生成密码"
   },
   "result": {
     "message": "结果"
