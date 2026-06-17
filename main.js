@@ -371,7 +371,7 @@ function Gerate() {
     // Criar uma lista apenas com os índices na ordem dos valores
     const indicesOrdenados = listaComIndices.map(item => item.indice);
 
-    console.log(indicesOrdenados);
+    //console.log(indicesOrdenados);
 
     results = indicesOrdenados;
 
