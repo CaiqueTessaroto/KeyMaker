@@ -5,6 +5,7 @@ document.getElementById("button_eyes").addEventListener('click', () => { Show_In
 document.getElementById("button_more").addEventListener('click', () => { Add_InputFields(); });
 document.getElementById("button_less").addEventListener('click', () => { Remove_InputFields(); });
 document.getElementById("button_play").addEventListener('click', () => { Gerate(); });
+document.getElementById("button_copy").addEventListener('click', CopyPassword);
 
 window.onload = function () {
 
@@ -446,4 +447,30 @@ function save() {
 
 
 
+async function CopyPassword() {
 
+    const output = document.getElementById("output");
+
+    if (!output.value)
+        return;
+
+    try {
+
+        await navigator.clipboard.writeText(output.value);
+
+        const button = document.getElementById("button_copy");
+
+        button.textContent = "✓";
+
+        setTimeout(() => {
+            button.textContent = "📋";
+        }, 1500);
+
+    }
+    catch (err) {
+
+        output.select();
+        document.execCommand('copy');
+
+    }
+}

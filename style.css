@@ -538,6 +538,40 @@ main {
     opacity: .75;
 }
 
+.output-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.button_copy {
+    min-width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    background: var(--card-bg);
+    color: var(--text-color);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease;
+}
+
+.button_copy:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.button_copy:active {
+    transform: translateY(0);
+}
 /* Scrollbar */
 main::-webkit-scrollbar { width: 4px; }
 main::-webkit-scrollbar-track { background: transparent; }

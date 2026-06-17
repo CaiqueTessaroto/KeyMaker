@@ -82,7 +82,14 @@
         <!-- Result -->
         <div class="div_resultado_output">
             <p class="texto_aviso_resultado">Resultado</p>
-            <input class="output" id="output" type="password" placeholder="Senha gerada" name="myInput">
+
+            <div class="output-container">
+                <input class="output" id="output" type="password" placeholder="Senha gerada" name="myInput">
+
+                <button type="button" id="button_copy" class="button_copy" title="Copiar senha">
+                    📋
+                </button>
+            </div>
         </div>
 
     </main>
@@ -92,7 +99,7 @@
         <div class="footer-content">
 
             <span class="footer-open-source">
-                🔓 Open Source 
+                🔓 Open Source
             </span>
 
             <div class="footer-actions">
