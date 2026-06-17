@@ -8,8 +8,9 @@ KeyMaker is a lightweight, open-source browser extension that creates unique pas
 
 1. Enter the website or service name.
 2. Enter one or more keywords.
-3. Click **Generate Password**.
-4. Use the generated password on that website.
+3. Select the toggles to use different parts of the keyword or the entire keyword.
+4. Click **Generate Password**.
+5. Use the generated password on that website.
 
 Using the same inputs will always produce the same password.
 
