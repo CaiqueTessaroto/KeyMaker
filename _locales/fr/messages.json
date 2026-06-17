@@ -51,9 +51,12 @@
     "message": "Saisissez un ou plusieurs mots-clés."
   },
   "step3": {
-    "message": "Cliquez sur Générer le mot de passe."
+    "message": "Sélectionnez les bascules pour utiliser différentes parties du mot-clé ou l'intégralité du mot-clé."
   },
   "step4": {
+    "message": "Cliquez sur Générer le mot de passe."
+  },
+  "step5": {
     "message": "Utilisez le mot de passe généré sur ce site Web."
   },
   "sameInputText": {

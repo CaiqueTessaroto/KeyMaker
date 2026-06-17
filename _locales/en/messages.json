@@ -51,9 +51,12 @@
     "message": "Enter one or more keywords."
   },
   "step3": {
-    "message": "Click Generate Password."
+    "message": "Select the toggles to use different parts of the keyword or the entire keyword."
   },
   "step4": {
+    "message": "Click Generate Password."
+  },
+  "step5": {
     "message": "Use the generated password on that website."
   },
   "sameInputText": {

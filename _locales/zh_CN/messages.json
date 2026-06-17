@@ -51,9 +51,12 @@
     "message": "输入一个或多个关键词。"
   },
   "step3": {
-    "message": "点击生成密码。"
+    "message": "选择开关以使用关键词的不同部分或整个关键词。"
   },
   "step4": {
+    "message": "点击生成密码。"
+  },
+  "step5": {
     "message": "在该网站上使用生成的密码。"
   },
   "sameInputText": {

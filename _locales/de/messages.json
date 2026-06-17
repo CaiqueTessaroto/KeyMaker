@@ -51,9 +51,12 @@
     "message": "Geben Sie ein oder mehrere Schlüsselwörter ein."
   },
   "step3": {
-    "message": "Klicken Sie auf Passwort generieren."
+    "message": "Wählen Sie die Umschalter, um verschiedene Teile des Schlüsselworts oder das gesamte Schlüsselwort zu verwenden."
   },
   "step4": {
+    "message": "Klicken Sie auf Passwort generieren."
+  },
+  "step5": {
     "message": "Verwenden Sie das generierte Passwort auf dieser Website."
   },
   "sameInputText": {

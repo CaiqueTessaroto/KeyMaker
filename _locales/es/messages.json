@@ -51,9 +51,12 @@
     "message": "Introduce una o más palabras clave."
   },
   "step3": {
-    "message": "Haz clic en Generar contraseña."
+    "message": "Seleccione los interruptores para usar diferentes partes de la palabra clave o la palabra clave completa."
   },
   "step4": {
+    "message": "Haz clic en Generar contraseña."
+  },
+  "step5": {
     "message": "Usa la contraseña generada en ese sitio web."
   },
   "sameInputText": {

@@ -51,9 +51,12 @@
     "message": "Digite uma ou mais palavras-chave."
   },
   "step3": {
-    "message": "Clique em Gerar Senha."
+    "message": "Selecione as opções para usar partes diferentes da palavra-chave ou a palavra-chave inteira."
   },
   "step4": {
+    "message": "Clique em Gerar Senha."
+  },
+  "step5": {
     "message": "Utilize a senha gerada nesse site."
   },
   "sameInputText": {
