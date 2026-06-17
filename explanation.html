@@ -4,20 +4,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <title>KeyMaker - Help</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            width: 420px;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .help-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .help-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 16px;
+            backdrop-filter: blur(12px);
+        }
+
+        .help-card h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .help-card p,
+        .help-card li {
+            line-height: 1.6;
+            opacity: .95;
+        }
+
+        .help-card ol {
+            margin-left: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .back-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
+        }
+
+        .back-button {
+            width: 100%;
+            padding: 12px 16px;
+
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+
+            background: var(--card-bg);
+            color: var(--text-color);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            backdrop-filter: blur(12px);
+
+            transition:
+                transform .15s ease,
+                background .15s ease,
+                border-color .15s ease,
+                box-shadow .15s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        .back-button:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .footer {
+            text-align: center;
+            opacity: .6;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <form>
+    <div class="help-container">
 
+        <div class="logo">
+            <h1>🔑 KeyMaker</h1>
+        </div>
 
+        <div class="help-card">
+            <h2 id="whatIsTitle"></h2>
+            <p id="whatIsText"></p>
+        </div>
 
-    </form>
+        <div class="help-card">
+            <h2 id="howWorksTitle"></h2>
+
+            <ol>
+                <li id="step1"></li>
+                <li id="step2"></li>
+                <li id="step3"></li>
+                <li id="step4"></li>
+            </ol>
+
+            <p id="sameInputText"></p>
+        </div>
+
+        <div class="help-card">
+            <h2 id="privacyTitle"></h2>
+            <p id="privacyText"></p>
+        </div>
+
+        <div class="back-container">
+            <button id="backButton" class="back-button">
+                ← Back
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+
+        document
+            .getElementById('backButton')
+            .addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const getMessage = (key, fallback = '') => {
+
+                if (
+                    typeof chrome !== 'undefined' &&
+                    chrome.i18n &&
+                    chrome.i18n.getMessage
+                ) {
+                    return chrome.i18n.getMessage(key);
+                }
+
+                return fallback;
+            };
+
+            const setText = (id, key, fallback) => {
+                document.getElementById(id).textContent =
+                    getMessage(key, fallback);
+            };
+
+            setText(
+                'whatIsTitle',
+                'whatIsTitle',
+                'What is KeyMaker?'
+            );
+
+            setText(
+                'whatIsText',
+                'whatIsText',
+                'KeyMaker generates deterministic passwords based on information you already know.'
+            );
+
+            setText(
+                'howWorksTitle',
+                'howWorksTitle',
+                'How does it work?'
+            );
+
+            setText('step1', 'step1', 'Enter the website name.');
+            setText('step2', 'step2', 'Enter one or more keywords.');
+            setText('step3', 'step3', 'Click Generate Password.');
+            setText('step4', 'step4', 'Use the generated password on that website.');
+
+            setText(
+                'sameInputText',
+                'sameInputText',
+                'Using the same inputs will always generate the same password.'
+            );
+
+            setText(
+                'privacyTitle',
+                'privacyTitle',
+                'Privacy'
+            );
+
+            setText(
+                'privacyText',
+                'privacyText',
+                'All password generation happens locally in your browser. No information is sent to external servers.'
+            );
+        });
+    </script>
 
 </body>
+
+<footer>
+    <div class="footer">
+        KeyMaker v1.0
+    </div>
+</footer>
 
 </html>

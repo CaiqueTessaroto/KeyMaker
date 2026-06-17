@@ -1,0 +1,68 @@
+{
+  "appSubtitle": {
+    "message": "Crie senhas padronizadas por site, fáceis de memorizar com o tempo."
+  },
+  "toggleTheme": {
+    "message": "Alternar tema"
+  },
+  "togglePasswords": {
+    "message": "Mostrar ou ocultar senhas"
+  },
+  "autosaveOn": {
+    "message": "Salvamento automático ativado"
+  },
+  "help": {
+    "message": "Ajuda"
+  },
+  "sitePlaceholder": {
+    "message": "Site / domínio"
+  },
+  "keywordPlaceholder": {
+    "message": "Palavra-chave"
+  },
+  "removeField": {
+    "message": "Remover campo"
+  },
+  "addField": {
+    "message": "Adicionar campo"
+  },
+  "generate": {
+    "message": "⚡ Gerar Senha"
+  },
+  "result": {
+    "message": "Resultado"
+  },
+  "generatedPassword": {
+    "message": "Senha gerada"
+  },
+  "whatIsTitle": {
+    "message": "O que é o KeyMaker?"
+  },
+  "whatIsText": {
+    "message": "O KeyMaker gera senhas determinísticas baseadas em informações que você já conhece."
+  },
+  "howWorksTitle": {
+    "message": "Como funciona?"
+  },
+  "step1": {
+    "message": "Digite o nome do site."
+  },
+  "step2": {
+    "message": "Digite uma ou mais palavras-chave."
+  },
+  "step3": {
+    "message": "Clique em Gerar Senha."
+  },
+  "step4": {
+    "message": "Utilize a senha gerada nesse site."
+  },
+  "sameInputText": {
+    "message": "Utilizando as mesmas informações, a mesma senha será gerada."
+  },
+  "privacyTitle": {
+    "message": "Privacidade"
+  },
+  "privacyText": {
+    "message": "Toda a geração de senhas acontece localmente no seu navegador. Nenhuma informação é enviada para servidores externos."
+  }
+}

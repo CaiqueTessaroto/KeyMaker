@@ -1,0 +1,68 @@
+{
+  "appSubtitle": {
+    "message": "Create site-specific passwords that become easy to remember over time."
+  },
+  "toggleTheme": {
+    "message": "Toggle theme"
+  },
+  "togglePasswords": {
+    "message": "Show or hide passwords"
+  },
+  "autosaveOn": {
+    "message": "Autosave enabled"
+  },
+  "help": {
+    "message": "Help"
+  },
+  "sitePlaceholder": {
+    "message": "Website / domain"
+  },
+  "keywordPlaceholder": {
+    "message": "Keyword"
+  },
+  "removeField": {
+    "message": "Remove field"
+  },
+  "addField": {
+    "message": "Add field"
+  },
+  "generate": {
+    "message": "⚡ Generate Password"
+  },
+  "result": {
+    "message": "Result"
+  },
+  "generatedPassword": {
+    "message": "Generated password"
+  },
+  "whatIsTitle": {
+    "message": "What is KeyMaker?"
+  },
+  "whatIsText": {
+    "message": "KeyMaker generates deterministic passwords based on information you already know."
+  },
+  "howWorksTitle": {
+    "message": "How does it work?"
+  },
+  "step1": {
+    "message": "Enter the website name."
+  },
+  "step2": {
+    "message": "Enter one or more keywords."
+  },
+  "step3": {
+    "message": "Click Generate Password."
+  },
+  "step4": {
+    "message": "Use the generated password on that website."
+  },
+  "sameInputText": {
+    "message": "Using the same inputs will always generate the same password."
+  },
+  "privacyTitle": {
+    "message": "Privacy"
+  },
+  "privacyText": {
+    "message": "All password generation happens locally in your browser. No information is sent to external servers."
+  }
+}
