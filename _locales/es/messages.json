@@ -1,0 +1,68 @@
+{
+  "appSubtitle": {
+    "message": "Cree contraseñas específicas para cada sitio que sean fáciles de recordar con el tiempo."
+  },
+  "toggleTheme": {
+    "message": "Cambiar tema"
+  },
+  "togglePasswords": {
+    "message": "Mostrar u ocultar contraseñas"
+  },
+  "autosaveOn": {
+    "message": "Autoguardado activado"
+  },
+  "help": {
+    "message": "Ayuda"
+  },
+  "sitePlaceholder": {
+    "message": "Sitio web / dominio"
+  },
+  "keywordPlaceholder": {
+    "message": "Palabra clave"
+  },
+  "removeField": {
+    "message": "Eliminar campo"
+  },
+  "addField": {
+    "message": "Añadir campo"
+  },
+  "generate": {
+    "message": "⚡ Generar contraseña"
+  },
+  "result": {
+    "message": "Resultado"
+  },
+  "generatedPassword": {
+    "message": "Contraseña generada"
+  },
+  "whatIsTitle": {
+    "message": "¿Qué es KeyMaker?"
+  },
+  "whatIsText": {
+    "message": "KeyMaker genera contraseñas deterministas basadas en información que ya conoces."
+  },
+  "howWorksTitle": {
+    "message": "¿Cómo funciona?"
+  },
+  "step1": {
+    "message": "Introduce el nombre del sitio web."
+  },
+  "step2": {
+    "message": "Introduce una o más palabras clave."
+  },
+  "step3": {
+    "message": "Haz clic en Generar contraseña."
+  },
+  "step4": {
+    "message": "Usa la contraseña generada en ese sitio web."
+  },
+  "sameInputText": {
+    "message": "Usar las mismas entradas siempre generará la misma contraseña."
+  },
+  "privacyTitle": {
+    "message": "Privacidad"
+  },
+  "privacyText": {
+    "message": "Toda la generación de contraseñas ocurre localmente en tu navegador. No se envía información a servidores externos."
+  }
+}

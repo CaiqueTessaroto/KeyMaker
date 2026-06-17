@@ -1,0 +1,68 @@
+{
+  "appSubtitle": {
+    "message": "Créez des mots de passe spécifiques à chaque site, faciles à mémoriser avec le temps."
+  },
+  "toggleTheme": {
+    "message": "Changer de thème"
+  },
+  "togglePasswords": {
+    "message": "Afficher ou masquer les mots de passe"
+  },
+  "autosaveOn": {
+    "message": "Sauvegarde automatique activée"
+  },
+  "help": {
+    "message": "Aide"
+  },
+  "sitePlaceholder": {
+    "message": "Site Web / domaine"
+  },
+  "keywordPlaceholder": {
+    "message": "Mot-clé"
+  },
+  "removeField": {
+    "message": "Supprimer le champ"
+  },
+  "addField": {
+    "message": "Ajouter un champ"
+  },
+  "generate": {
+    "message": "⚡ Générer le mot de passe"
+  },
+  "result": {
+    "message": "Résultat"
+  },
+  "generatedPassword": {
+    "message": "Mot de passe généré"
+  },
+  "whatIsTitle": {
+    "message": "Qu'est-ce que KeyMaker ?"
+  },
+  "whatIsText": {
+    "message": "KeyMaker génère des mots de passe déterministes basés sur des informations que vous connaissez déjà."
+  },
+  "howWorksTitle": {
+    "message": "Comment cela fonctionne-t-il ?"
+  },
+  "step1": {
+    "message": "Saisissez le nom du site Web."
+  },
+  "step2": {
+    "message": "Saisissez un ou plusieurs mots-clés."
+  },
+  "step3": {
+    "message": "Cliquez sur Générer le mot de passe."
+  },
+  "step4": {
+    "message": "Utilisez le mot de passe généré sur ce site Web."
+  },
+  "sameInputText": {
+    "message": "Utiliser les mêmes entrées générera toujours le même mot de passe."
+  },
+  "privacyTitle": {
+    "message": "Confidentialité"
+  },
+  "privacyText": {
+    "message": "Toute la génération de mots de passe s'effectue localement dans votre navigateur. Aucune information n'est envoyée à des serveurs externes."
+  }
+}

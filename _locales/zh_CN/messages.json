@@ -1,0 +1,68 @@
+{
+  "appSubtitle": {
+    "message": "创建特定于网站的密码，随着时间推移易于记忆。"
+  },
+  "toggleTheme": {
+    "message": "切换主题"
+  },
+  "togglePasswords": {
+    "message": "显示或隐藏密码"
+  },
+  "autosaveOn": {
+    "message": "自动保存已启用"
+  },
+  "help": {
+    "message": "帮助"
+  },
+  "sitePlaceholder": {
+    "message": "网站 / 域名"
+  },
+  "keywordPlaceholder": {
+    "message": "关键词"
+  },
+  "removeField": {
+    "message": "移除字段"
+  },
+  "addField": {
+    "message": "添加字段"
+  },
+  "generate": {
+    "message": "⚡ 生成密码"
+  },
+  "result": {
+    "message": "结果"
+  },
+  "generatedPassword": {
+    "message": "生成的密码"
+  },
+  "whatIsTitle": {
+    "message": "什么是 KeyMaker？"
+  },
+  "whatIsText": {
+    "message": "KeyMaker 基于您已知的信息生成确定性密码。"
+  },
+  "howWorksTitle": {
+    "message": "它是如何工作的？"
+  },
+  "step1": {
+    "message": "输入网站名称。"
+  },
+  "step2": {
+    "message": "输入一个或多个关键词。"
+  },
+  "step3": {
+    "message": "点击生成密码。"
+  },
+  "step4": {
+    "message": "在该网站上使用生成的密码。"
+  },
+  "sameInputText": {
+    "message": "使用相同的输入将始终生成相同的密码。"
+  },
+  "privacyTitle": {
+    "message": "隐私"
+  },
+  "privacyText": {
+    "message": "所有密码生成均在您的浏览器本地进行。不会向外部服务器发送任何信息。"
+  }
+}
