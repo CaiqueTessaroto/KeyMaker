@@ -14,3 +14,17 @@ O projeto permite definir exatamente quais tipos de caracteres (letras, números
 O nome do site (ou serviço) é utilizado como referência para gerar automaticamente uma senha única para cada plataforma, mantendo um padrão consistente.
 
 Dessa forma, o usuário pode criar senhas diferentes para cada site garantindo segurança, previsibilidade e reutilização controlada do padrão.
+
+
+## License
+
+KeyMaker is released under the MIT License.
+
+## Security
+
+All password generation is performed locally in the browser.
+No data is sent to external servers.
+
+## Trademark
+
+The KeyMaker name and logo are property of Caique Leandro Tessaroto.
