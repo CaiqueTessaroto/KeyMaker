@@ -38,8 +38,12 @@ window.onload = function () {
     let password = document.getElementById('ordem_1');
     password.value = 2;
 
+    const checkboxes = document.querySelectorAll('.checkbox');
 
-    
+    checkboxes.forEach(cb => {
+        cb.checked = true;
+    });
+
     if (isAutosaveEnabled()) load();
 
     Get_Sitename();
