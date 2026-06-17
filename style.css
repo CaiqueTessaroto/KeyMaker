@@ -495,6 +495,49 @@ main {
     height: 50px;
 }
 
+.ad-banner {
+    margin-top: 12px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    backdrop-filter: blur(12px);
+
+    font-size: 13px;
+}
+
+.footer-open-source {
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 8px;
+
+    transition: opacity .15s ease;
+}
+
+.footer-link:hover {
+    opacity: .75;
+}
+
 /* Scrollbar */
 main::-webkit-scrollbar { width: 4px; }
 main::-webkit-scrollbar-track { background: transparent; }

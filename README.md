@@ -1,29 +1,76 @@
+# 🔑 KeyMaker
 
-# Standardized and deterministic password generation system.
+Generate deterministic and site-specific passwords directly in your browser.
 
-The project allows you to define exactly which types of characters (letters, numbers, symbols, etc.) should be used in each position of the password.
+KeyMaker is a lightweight, open-source browser extension that creates unique passwords for each website based on information you already know. The same inputs will always generate the same password, making it easier to remember and reproduce passwords without storing them.
 
-The website (or service) name is used as a reference to automatically generate a unique password for each platform, maintaining a consistent pattern.
+## How It Works
 
-In this way, the user can create different passwords for each website ensuring security, predictability, and controlled reuse of the pattern.
+1. Enter the website or service name.
+2. Enter one or more keywords.
+3. Click **Generate Password**.
+4. Use the generated password on that website.
 
-## [PT]
-Sistema de geração de senhas padronizadas e determinísticas.
-O projeto permite definir exatamente quais tipos de caracteres (letras, números, símbolos, etc.) devem ser usados em cada posição da senha.
+Using the same inputs will always produce the same password.
 
-O nome do site (ou serviço) é utilizado como referência para gerar automaticamente uma senha única para cada plataforma, mantendo um padrão consistente.
+Example:
 
-Dessa forma, o usuário pode criar senhas diferentes para cada site garantindo segurança, previsibilidade e reutilização controlada do padrão.
+Website:
 
+```text
+github.com
+```
 
-## License
+Keyword:
 
-KeyMaker is released under the MIT License.
+```text
+mySecretPhrase
+```
+
+Keyword:
+
+```text
+A#
+```
+
+Generated Password:
+
+```text
+githubmySecretPhraseA#
+```
 
 ## Security
 
-All password generation is performed locally in the browser.
-No data is sent to external servers.
+All password generation happens locally in your browser.
+
+KeyMaker does not:
+
+* Store passwords
+* Send data to external servers
+* Require an account
+* Collect analytics
+
+Your inputs never leave your device.
+
+## Installation
+
+### Chrome / Chromium Browsers
+
+1. Download the extension.
+2. Open `chrome://extensions`.
+3. Enable **Developer Mode**.
+4. Click **Load unpacked**.
+5. Select the extension folder.
+
+## Open Source
+
+KeyMaker is open source and available on GitHub.
+
+Contributions, bug reports, and suggestions are welcome.
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Trademark
 

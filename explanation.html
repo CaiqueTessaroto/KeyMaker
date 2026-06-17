@@ -105,6 +105,43 @@
             font-size: 12px;
             margin-top: 8px;
         }
+
+
+        .support-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .support-link {
+            display: block;
+
+            text-decoration: none;
+            text-align: center;
+
+            padding: 12px;
+
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+
+            transition:
+                transform .15s ease,
+                background .15s ease,
+                box-shadow .15s ease;
+        }
+
+        .support-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+        }
+
+        .support-link:visited {
+            color: var(--text-color);
+        }
     </style>
 </head>
 
@@ -137,6 +174,32 @@
         <div class="help-card">
             <h2 id="privacyTitle"></h2>
             <p id="privacyText"></p>
+        </div>
+
+        <div class="help-card">
+            <h2 id="supportTitle">❤️ Support KeyMaker</h2>
+
+            <p id="supportText">
+                KeyMaker is free, open-source and developed independently.
+            </p>
+
+            <div class="support-links">
+
+                <a href="https://github.com/CaiqueTessaroto/KeyMaker" target="_blank" class="support-link">
+                    ⭐ Star on GitHub
+                </a>
+
+                <a href="https://buymeacoffee.com/caiquetessaroto" target="_blank" class="support-link">
+                    ☕ Buy Me a Coffee
+                </a>
+
+                <!-- 
+                <a href="https://SEU_SITE.com/donate" target="_blank" class="support-link">
+                    ❤️ Donate
+                </a>
+                -->
+
+            </div>
         </div>
 
         <div class="back-container">

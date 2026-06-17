@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com;">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com;">
     <title>KeyMaker</title>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -18,9 +19,12 @@
             <span class="brand-name">KeyMaker</span>
         </a>
         <div class="header-controls">
-            <button class="btn-theme" id="btn_theme" title="Alternar tema" aria-label="Alternar modo claro/escuro">🌙</button>
-            <button class="btn-autosave" id="btn_autosave" title="Salvamento automático ativado" aria-label="Ativar ou desativar salvamento automático" aria-pressed="false">💾</button>
-            <button class="btn-eyes" id="button_eyes" title="Mostrar/ocultar senhas" aria-label="Mostrar ou ocultar senhas">👁</button>
+            <button class="btn-theme" id="btn_theme" title="Alternar tema"
+                aria-label="Alternar modo claro/escuro">🌙</button>
+            <button class="btn-autosave" id="btn_autosave" title="Salvamento automático ativado"
+                aria-label="Ativar ou desativar salvamento automático" aria-pressed="false">💾</button>
+            <button class="btn-eyes" id="button_eyes" title="Mostrar/ocultar senhas"
+                aria-label="Mostrar ou ocultar senhas">👁</button>
             <a class="btn-help" href="explanation.html" title="Ajuda" aria-label="Ajuda">?</a>
         </div>
     </header>
@@ -42,7 +46,8 @@
                     </div>
                     <div class="selecfield">
                         <select class="order" name="ordem" id="ordem_0"></select>
-                        <input class="input" id="password_0" type="password" placeholder="Site / domínio" name="myInput">
+                        <input class="input" id="password_0" type="password" placeholder="Site / domínio"
+                            name="myInput">
                     </div>
                 </section>
             </section>
@@ -84,17 +89,26 @@
 
     <!-- AD BANNER — Google AdSense -->
     <div class="ad-banner">
-        <!--
-            Substitua pelos dados reais da sua conta AdSense:
-            data-ad-client  → seu Publisher ID  (ex: ca-pub-1234567890123456)
-            data-ad-slot    → ID do bloco de anúncio
-        -->
-        <ins class="adsbygoogle"
-             style="display:block;width:320px;height:50px"
-             data-ad-client="pub-2341525684736481"
-             data-ad-slot="XXXXXXXXXX"
-             data-ad-format="horizontal"
-             data-full-width-responsive="false"></ins>
+        <div class="footer-content">
+
+            <span class="footer-open-source">
+                🔓 Open Source
+            </span>
+
+            <div class="footer-actions">
+
+                <a href="https://github.com/CaiqueTessaroto/KeyMaker" target="_blank" class="footer-link">
+                    ⭐ GitHub
+                </a>
+            </div>
+
+            <div class="footer-actions">
+                <a href="https://buymeacoffee.com/caiquetessaroto" target="_blank" class="footer-link">
+                    ☕ Coffee
+                </a>
+            </div>
+
+        </div>
     </div>
 
     <!-- TEMPLATE for dynamic fields -->
@@ -116,6 +130,7 @@
     <script src="theme.js"></script>
     <script src="main.js"></script>
 
-<script src='i18n.js'></script>
+    <script src='i18n.js'></script>
 </body>
+
 </html>
