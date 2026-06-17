@@ -138,7 +138,7 @@ function Add_InputFields() {
 
     const itens = document.getElementsByClassName("inputfield");
 
-    if (itens.length <= 6) {
+    if (itens.length < 8) {
 
         var number = itens.length;
 
