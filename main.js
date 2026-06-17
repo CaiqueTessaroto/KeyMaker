@@ -120,9 +120,11 @@ function Show_Input() {
     }
 
     if (inputs[0].type == "text") {
-        button_img.style.backgroundImage = "url(imagens/open_eyes.png)";
+        button_img.textContent = "🔓";
+        button_img.classList.add("active");
     } else {
-        button_img.style.backgroundImage = "url(imagens/close_eyes.png)";
+        button_img.textContent = "👁";
+        button_img.classList.remove("active");
     }
 }
 
@@ -414,8 +416,7 @@ function Gerate() {
 
     output.value = result;
 
-
-    save();
+    if (isAutosaveEnabled()) save();
 
 }
 
