@@ -39,6 +39,7 @@ window.onload = function () {
     password.value = 2;
 
 
+    
     if (isAutosaveEnabled()) load();
 
     Get_Sitename();
