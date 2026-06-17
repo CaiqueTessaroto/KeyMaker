@@ -67,5 +67,14 @@
   },
   "privacyText": {
     "message": "Die gesamte Passwortgenerierung findet lokal in Ihrem Browser statt. Es werden keine Informationen an externe Server gesendet."
+  },
+  "supportText": {
+    "message": "KeyMaker ist kostenlos, Open-Source und wird unabhängig entwickelt."
+  },
+  "backButton": {
+    "message": "← Zurück"
+  },
+  "supportTitle": {
+    "message": "❤️ KeyMaker unterstützen"
   }
 }

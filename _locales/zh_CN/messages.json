@@ -67,5 +67,14 @@
   },
   "privacyText": {
     "message": "所有密码生成均在您的浏览器本地进行。不会向外部服务器发送任何信息。"
+  },
+  "supportText": {
+    "message": "KeyMaker 是免费、开源且独立开发的。"
+  },
+  "backButton": {
+    "message": "← 返回"
+  },
+  "supportTitle": {
+    "message": "❤️ 支持 KeyMaker"
   }
 }

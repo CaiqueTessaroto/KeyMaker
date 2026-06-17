@@ -67,5 +67,14 @@
   },
   "privacyText": {
     "message": "Toute la génération de mots de passe s'effectue localement dans votre navigateur. Aucune information n'est envoyée à des serveurs externes."
+  },
+  "supportText": {
+    "message": "KeyMaker est gratuit, open-source et développé de manière indépendante."
+  },
+  "backButton": {
+    "message": "← Retour"
+  },
+  "supportTitle": {
+    "message": "❤️ Soutenir KeyMaker"
   }
 }

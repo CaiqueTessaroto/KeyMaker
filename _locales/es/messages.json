@@ -67,5 +67,14 @@
   },
   "privacyText": {
     "message": "Toda la generación de contraseñas ocurre localmente en tu navegador. No se envía información a servidores externos."
+  },
+  "supportText": {
+    "message": "KeyMaker es gratuito, de código abierto y desarrollado de forma independiente."
+  },
+  "backButton": {
+    "message": "← Atrás"
+  },
+  "supportTitle": {
+    "message": "❤️ Apoyar a KeyMaker"
   }
 }
