@@ -50,7 +50,7 @@
                     </div>
                     <div class="selecfield">
                         <select class="order" name="ordem" id="ordem_0"></select>
-                        <input class="input" id="password_0" type="password" placeholder="Site / domain" name="myInput">
+                        <input class="input" id="password_0" type="password" placeholder="Site / domain" name="myInput" readonly title="Auto-filled by the current site's domain">
                     </div>
                 </section>
             </section>
@@ -92,6 +92,15 @@
                 <button type="button" id="button_copy" class="button_copy" title="Copy password">
                     📋
                 </button>
+            </div>
+        </div>
+
+        <!-- Save Pattern -->
+        <div class="save-pattern-bar" id="save_pattern_bar">
+            <span class="save-pattern-label" id="save_pattern_label">Save this as your default pattern?</span>
+            <div class="save-pattern-actions">
+                <button type="button" class="btn-save-pattern" id="btn_save_pattern">💾 Save pattern</button>
+                <button type="button" class="btn-clear-pattern" id="btn_clear_pattern" title="Clear saved pattern">✕</button>
             </div>
         </div>
 

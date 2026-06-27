@@ -576,3 +576,80 @@ main {
 main::-webkit-scrollbar { width: 4px; }
 main::-webkit-scrollbar-track { background: transparent; }
 main::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 4px; }
+
+/* === SAVE PATTERN BAR === */
+.save-pattern-bar {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--bg-surface);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    animation: slideDown 0.2s ease;
+}
+
+.save-pattern-bar.visible {
+    display: flex;
+}
+
+.save-pattern-bar.saved {
+    border-color: var(--success);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15);
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.save-pattern-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.save-pattern-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.btn-save-pattern {
+    padding: 5px 12px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+.btn-save-pattern:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn-clear-pattern {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+}
+.btn-clear-pattern:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #fff;
+}

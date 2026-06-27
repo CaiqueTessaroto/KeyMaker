@@ -1,0 +1,83 @@
+/* KeyMaker — content.css
+   Popup de autofill injetado nas páginas. Usa uma shadow-dom-like classe única
+   para evitar conflitos com estilos do site.
+*/
+
+#km-autofill-popup {
+    position: absolute;
+    z-index: 2147483647; /* máximo possível */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+}
+
+#km-autofill-popup.km-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#km-autofill-popup .km-popup-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #1a1d27;
+    border: 1px solid #6c63ff;
+    border-radius: 10px;
+    box-shadow:
+        0 4px 24px rgba(0,0,0,0.5),
+        0 0 0 3px rgba(108, 99, 255, 0.18);
+    white-space: nowrap;
+}
+
+#km-autofill-popup .km-logo {
+    color: #c4c0ff;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    flex: 1;
+}
+
+#km-autofill-popup .km-btn-fill {
+    padding: 5px 14px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(135deg, #6c63ff, #8178ff);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.15s ease, transform 0.15s ease;
+    font-family: inherit;
+}
+
+#km-autofill-popup .km-btn-fill:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+#km-autofill-popup .km-btn-close {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid #2e3347;
+    background: transparent;
+    color: #555d7a;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    font-family: inherit;
+}
+
+#km-autofill-popup .km-btn-close:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #fff;
+}

@@ -6,6 +6,8 @@ document.getElementById("button_more").addEventListener('click', () => { Add_Inp
 document.getElementById("button_less").addEventListener('click', () => { Remove_InputFields(); });
 document.getElementById("button_play").addEventListener('click', () => { Gerate(); });
 document.getElementById("button_copy").addEventListener('click', CopyPassword);
+document.getElementById("btn_save_pattern").addEventListener('click', SavePattern);
+document.getElementById("btn_clear_pattern").addEventListener('click', HidePatternBar);
 
 window.onload = function () {
 
@@ -424,6 +426,7 @@ function Gerate() {
 
     if (isAutosaveEnabled()) save();
 
+    ShowPatternBar();
 }
 
 
@@ -472,5 +475,94 @@ async function CopyPassword() {
         output.select();
         document.execCommand('copy');
 
+    }
+}
+
+
+/* ===== SAVE PATTERN FEATURE ===== */
+
+function GetCurrentPattern() {
+    const inputs = document.querySelectorAll('.input');
+    const orders = document.querySelectorAll('.order');
+    const containers = document.querySelectorAll('.container');
+
+    const fields = [];
+    inputs.forEach((inp, i) => {
+        const checkboxes = document.getElementsByName('checkbox_field_' + i);
+        const checkedStates = [];
+        checkboxes.forEach(cb => checkedStates.push(cb.checked));
+
+        fields.push({
+            // Campo 0 é o site: salva a config mas NÃO o valor,
+            // pois o domínio é sempre injetado dinamicamente pelo content script.
+            value: i === 0 ? '' : inp.value,
+            order: orders[i] ? orders[i].value : (i + 1),
+            checkedStates: checkedStates
+        });
+    });
+
+    return {
+        fields,
+        containerCount: containers.length
+    };
+}
+
+function ShowPatternBar() {
+    const bar = document.getElementById('save_pattern_bar');
+    const label = document.getElementById('save_pattern_label');
+    const saved = chrome.storage ? null : localStorage.getItem('km_saved_pattern');
+
+    // Check if there's already a saved pattern
+    const checkSaved = (pattern) => {
+        if (pattern) {
+            label.textContent = 'Update your saved pattern?';
+            bar.classList.add('saved');
+        } else {
+            label.textContent = 'Save this as your default pattern?';
+            bar.classList.remove('saved');
+        }
+        bar.classList.add('visible');
+    };
+
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+        chrome.storage.local.get('km_saved_pattern', (res) => {
+            checkSaved(res.km_saved_pattern);
+        });
+    } else {
+        checkSaved(localStorage.getItem('km_saved_pattern'));
+    }
+}
+
+function HidePatternBar() {
+    const bar = document.getElementById('save_pattern_bar');
+    bar.classList.remove('visible');
+}
+
+function SavePattern() {
+    const pattern = GetCurrentPattern();
+    const bar = document.getElementById('save_pattern_bar');
+    const label = document.getElementById('save_pattern_label');
+    const btn = document.getElementById('btn_save_pattern');
+
+    const patternJSON = JSON.stringify(pattern);
+
+    const onSaved = () => {
+        label.textContent = '✓ Pattern saved!';
+        btn.textContent = '✓ Saved';
+        btn.style.background = 'var(--success)';
+        bar.classList.add('saved');
+
+        setTimeout(() => {
+            HidePatternBar();
+            btn.textContent = '💾 Save pattern';
+            btn.style.background = '';
+        }, 1800);
+    };
+
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+        chrome.storage.local.set({ km_saved_pattern: patternJSON }, onSaved);
+    } else {
+        localStorage.setItem('km_saved_pattern', patternJSON);
+        onSaved();
     }
 }
