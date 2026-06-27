@@ -283,6 +283,7 @@ main {
     align-items: center;
     gap: 3px;
     direction: rtl;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     max-width: 90px;
     min-width: 50px;
