@@ -17,6 +17,7 @@ https://caiquetessaroto.github.io/KeyMaker/
 3. Select the toggles to use different parts of the keyword or the entire keyword.
 4. Click **Generate Password**.
 5. Use the generated password on that website.
+6. On any future sign-up or login, KeyMaker will detect the password field, automatically use the current site's domain, apply your saved pattern, and offer to fill the password in one click.
 
 Using the same inputs will always produce the same password.
 
