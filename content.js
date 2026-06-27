@@ -41,10 +41,13 @@
             if (i === 0) {
                 // Manter checkboxes e ordem, trocar só o valor pelo domínio atual
                 const word = sitename || f.value || '';
+
                 // Recalcular checkedStates para o tamanho do novo valor
                 // (usar todos os caracteres = 1 checkbox marcada, como padrão)
-                const checks = word.split('').map(() => true);
-                return { ...f, value: word, checkedStates: checks };
+                //const checks = word.split('').map(() => true);
+                //return { ...f, value: word, checkedStates: checks };
+
+                return { ...f, value: word };
             }
             return f;
         });
@@ -111,7 +114,7 @@
                 const pwd = generateFromPattern(pattern, sitename);
                 if (pwd && activeField) {
                     activeField.value = pwd;
-                    activeField.dispatchEvent(new Event('input',  { bubbles: true }));
+                    activeField.dispatchEvent(new Event('input', { bubbles: true }));
                     activeField.dispatchEvent(new Event('change', { bubbles: true }));
                     activeField.focus();
                 }
@@ -134,8 +137,8 @@
         const rect = field.getBoundingClientRect();
         const scrollY = window.scrollY || window.pageYOffset;
         const scrollX = window.scrollX || window.pageXOffset;
-        popup.style.top      = (rect.bottom + scrollY + 6) + 'px';
-        popup.style.left     = (rect.left  + scrollX) + 'px';
+        popup.style.top = (rect.bottom + scrollY + 6) + 'px';
+        popup.style.left = (rect.left + scrollX) + 'px';
         popup.style.minWidth = Math.max(rect.width, 220) + 'px';
     }
 

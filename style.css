@@ -653,3 +653,8 @@ main::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 4px
     border-color: #ef4444;
     color: #fff;
 }
+
+#password_0[readonly] {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
