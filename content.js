@@ -41,16 +41,31 @@
             if (i === 0) {
                 // Manter checkboxes e ordem, trocar só o valor pelo domínio atual
                 const word = sitename || f.value || '';
+                const newLen = word.length;
+                const oldChecks = f.checkedStates;
+                const oldLen = oldChecks.length;
 
-                // Recalcular checkedStates para o tamanho do novo valor
-                // (usar todos os caracteres = 1 checkbox marcada, como padrão)
-                //const checks = word.split('').map(() => true);
-                //return { ...f, value: word, checkedStates: checks };
+                // Remapear proporcionalmente preservando quantidade e bordas
+                const selectedCount = oldChecks.filter(Boolean).length;
+                const oldIndices = oldChecks
+                    .map((c, i) => c ? i : -1)
+                    .filter(i => i !== -1);
 
-                return { ...f, value: word };
+                const newChecks = new Array(newLen).fill(false);
+
+                oldIndices.forEach(oldIdx => {
+                    // Mapear posição proporcional ao novo tamanho
+                    const ratio = oldLen > 1 ? oldIdx / (oldLen - 1) : 0;
+                    const newIdx = newLen > 1 ? Math.round(ratio * (newLen - 1)) : 0;
+                    newChecks[Math.min(newIdx, newLen - 1)] = true;
+                });
+
+                return { ...f, value: word, checkedStates: newChecks };
             }
             return f;
         });
+
+
 
         // Ordenar campos conforme a ordem salva
         const withIdx = fields.map((f, i) => ({ v: parseInt(f.order, 10) - 1, i }));
