@@ -402,21 +402,18 @@ function Gerate() {
         for (var i = 0; i < checkbox_field.length; i++) {
             checkbox_id = "checkbox_" + i + "_" + ordem;
             checkbox = document.getElementById(checkbox_id);
-            //const checkbox_selec = document.querySelectorAll('input[name="checkbox_field_' + ordem + '"]:checked');
-            //console.log(checkbox_selec)
 
-            if (checkbox.checked == true && passaword[i] != null && lyrics_size == 1) result = result + passaword[i];
+            if (!checkbox.checked) continue;
 
-            var init = i * lyrics_size;
-
-            if (lyrics_size != 1 && checkbox.checked == true) {
-                for (var x = init; x < wordsize; x++) {
-                    if (x < lyrics_size + init) {
-                        result = result + passaword[x];
-                    }
+            if (lyrics_size === 1) {
+                if (passaword[i] != null) result = result + passaword[i];
+            } else {
+                var init = Math.floor(i * lyrics_size);
+                var end = Math.min(Math.floor(init + lyrics_size), wordsize);
+                for (var x = init; x < end; x++) {
+                    result = result + passaword[x];
                 }
             }
-
         }
 
 
