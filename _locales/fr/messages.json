@@ -59,6 +59,12 @@
   "step5": {
     "message": "Utilisez le mot de passe généré sur ce site Web."
   },
+  "step6": {
+    "message": "Cliquez sur \"Enregistrer le motif\" pour stocker votre configuration."
+  },
+  "step7": {
+    "message": "Lors de toute future inscription ou connexion, KeyMaker détecte le champ de mot de passe et propose de le remplir automatiquement en utilisant le domaine du site actuel et votre motif enregistré."
+  },
   "sameInputText": {
     "message": "Utiliser les mêmes entrées générera toujours le même mot de passe."
   },

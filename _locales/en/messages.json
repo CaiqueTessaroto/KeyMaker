@@ -59,6 +59,12 @@
   "step5": {
     "message": "Use the generated password on that website."
   },
+  "step6": {
+    "message": "Click \"Save pattern\" to store your configuration."
+  },
+  "step7": {
+    "message": "On any future sign-up or login, KeyMaker detects the password field and offers to fill it automatically using the current site's domain and your saved pattern."
+  },
   "sameInputText": {
     "message": "Using the same inputs will always generate the same password."
   },

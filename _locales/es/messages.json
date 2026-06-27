@@ -59,6 +59,12 @@
   "step5": {
     "message": "Usa la contraseña generada en ese sitio web."
   },
+  "step6": {
+    "message": "Haga clic en \"Guardar patrón\" para almacenar su configuración."
+  },
+  "step7": {
+    "message": "En cualquier futuro registro o inicio de sesión, KeyMaker detecta el campo de contraseña y ofrece completarlo automáticamente utilizando el dominio del sitio actual y su patrón guardado."
+  },
   "sameInputText": {
     "message": "Usar las mismas entradas siempre generará la misma contraseña."
   },

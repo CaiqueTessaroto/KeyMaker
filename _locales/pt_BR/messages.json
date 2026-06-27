@@ -59,6 +59,12 @@
   "step5": {
     "message": "Utilize a senha gerada nesse site."
   },
+  "step6": {
+    "message": "Clique em \"Salvar padrão\" para armazenar sua configuração."
+  },
+  "step7": {
+    "message": "Em qualquer futuro cadastro ou login, o KeyMaker detecta o campo de senha e oferece preenchê-lo automaticamente usando o domínio do site atual e seu padrão salvo."
+  },
   "sameInputText": {
     "message": "Utilizando as mesmas informações, a mesma senha será gerada."
   },

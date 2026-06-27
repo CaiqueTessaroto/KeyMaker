@@ -59,6 +59,12 @@
   "step5": {
     "message": "Verwenden Sie das generierte Passwort auf dieser Website."
   },
+  "step6": {
+    "message": "Klicken Sie auf \"Muster speichern\", um Ihre Konfiguration zu speichern."
+  },
+  "step7": {
+    "message": "Bei jeder zukünftigen Registrierung oder Anmeldung erkennt KeyMaker das Passwortfeld und bietet an, es automatisch mit der Domain der aktuellen Website und Ihrem gespeicherten Muster auszufüllen."
+  },
   "sameInputText": {
     "message": "Die Verwendung derselben Eingaben generiert immer dasselbe Passwort."
   },

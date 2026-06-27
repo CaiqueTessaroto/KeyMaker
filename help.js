@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setText('step3', 'step3', 'Select the toggles to use different parts of the keyword or the entire keyword.');
     setText('step4', 'step4', 'Click Generate Password.');
     setText('step5', 'step5', 'Use the generated password on that website.');
+    setText('step6', 'step6', 'Click \"Save pattern\" to store your configuration.');
+    setText('step7', 'step7', 'On any future sign-up or login, KeyMaker detects the password field and offers to fill it automatically using the current sites domain and your saved pattern.');
 
     setText(
         'sameInputText',
