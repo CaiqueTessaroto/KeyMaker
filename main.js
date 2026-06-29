@@ -422,6 +422,7 @@ function Gerate() {
     output.value = result;
 
     if (isAutosaveEnabled()) save();
+    else deleteSave();
 
     ShowPatternBar();
 }
@@ -445,7 +446,10 @@ function save() {
 
 }
 
-
+function deleteSave() {
+    localStorage.removeItem('amount_container');
+    localStorage.removeItem('words_container');
+}
 
 async function CopyPassword() {
 
