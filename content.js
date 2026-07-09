@@ -49,36 +49,27 @@
     // domínio atual no lugar do campo 0 (campo "Site / domain").
 
     function generateFromPattern(pattern, sitename) {
-        // Clonar os fields e substituir o valor do campo 0 pelo site atual
+        // Clonar os fields e substituir só o VALOR do campo 0 pelo domínio atual.
+        // As checkedStates ficam do jeito que foram salvas — sem remap por
+        // tamanho de palavra. O modelo é "1 caixa = 1/N da palavra", e o
+        // próprio cálculo de lyrics_size (abaixo) já se adapta a qualquer
+        // wordsize novo automaticamente, igual o Gerate() faz.
         const fields = pattern.fields.map((f, i) => {
             if (i === 0) {
-                // Manter checkboxes e ordem, trocar só o valor pelo domínio atual
                 const word = sitename || f.value || '';
-                const newLen = word.length;
-                const oldChecks = f.checkedStates;
-                const oldLen = oldChecks.length;
+                let checkedStates = f.checkedStates;
 
-                // Remapear proporcionalmente preservando quantidade e bordas
-                const selectedCount = oldChecks.filter(Boolean).length;
-                const oldIndices = oldChecks
-                    .map((c, i) => c ? i : -1)
-                    .filter(i => i !== -1);
+                // Único ajuste necessário: se sobrarem mais caixas do que letras
+                // no novo domínio, trunca do fim (mesma regra do Remove_Checkbox
+                // no Gerate() — não pode ter caixa "menor que 1 letra").
+                if (checkedStates.length > word.length) {
+                    checkedStates = checkedStates.slice(0, word.length);
+                }
 
-                const newChecks = new Array(newLen).fill(false);
-
-                oldIndices.forEach(oldIdx => {
-                    // Mapear posição proporcional ao novo tamanho
-                    const ratio = oldLen > 1 ? oldIdx / (oldLen - 1) : 0;
-                    const newIdx = newLen > 1 ? Math.round(ratio * (newLen - 1)) : 0;
-                    newChecks[Math.min(newIdx, newLen - 1)] = true;
-                });
-
-                return { ...f, value: word, checkedStates: newChecks };
+                return { ...f, value: word, checkedStates };
             }
             return f;
         });
-
-
 
         // Ordenar campos conforme a ordem salva
         const withIdx = fields.map((f, i) => ({ v: parseInt(f.order, 10) - 1, i }));
@@ -100,12 +91,15 @@
 
             checks.forEach((checked, i) => {
                 if (!checked) return;
+
                 if (lyrics_size === 1) {
                     if (word[i] != null) result += word[i];
                 } else {
-                    const init = i * lyrics_size;
-                    for (let x = init; x < wordsize; x++) {
-                        if (x < lyrics_size + init) result += word[x];
+                    // igual ao Gerate(): Math.floor pra nunca cair em índice fracionário
+                    const init = Math.floor(i * lyrics_size);
+                    const end = Math.min(Math.floor(init + lyrics_size), wordsize);
+                    for (let x = init; x < end; x++) {
+                        result += word[x];
                     }
                 }
             });
