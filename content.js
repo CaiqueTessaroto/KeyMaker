@@ -14,10 +14,23 @@
 
     function getSitename() {
         try {
-            let url = window.location.hostname; // ex: "www.github.com"
-            url = url.replace(/^www\./, '');    // ex: "github.com"
-            url = url.split('.')[0];            // ex: "github"
-            return url;
+            const host = window.location.hostname.toLowerCase();
+            const parts = host.split('.');
+
+            if (parts.length <= 2) return parts[0]; // "facebook.com" -> "facebook"
+
+            // TLDs compostos: co.uk, com.br, org.uk, etc.
+            // Se o último rótulo é um country-code (2 letras) e o penúltimo
+            // é um sufixo genérico curto, o domínio real está 3 posições do fim.
+            const secondLevelSuffixes = ['co', 'com', 'org', 'net', 'gov', 'edu', 'ac', 'mil'];
+            const last = parts[parts.length - 1];
+            const secondLast = parts[parts.length - 2];
+
+            if (last.length === 2 && secondLevelSuffixes.includes(secondLast)) {
+                return parts[parts.length - 3]; // "facebook.co.uk" -> "facebook"
+            }
+
+            return secondLast; // "pt-br.facebook.com" -> "facebook"
         } catch (e) {
             return '';
         }
